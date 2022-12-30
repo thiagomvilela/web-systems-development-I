@@ -1,7 +1,3 @@
-# web-systems-development-I
-
-
-
 <h1 align="center">
   <img alt="Web Systems Development I" src="./img/ifpe-logo.png" />
 </h1>
