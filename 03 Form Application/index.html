@@ -1,0 +1,171 @@
+<!-- 
+ADSPL.16 - Desenvolvimento de Sistemas Web I
+Docente: Danilo Farias Soares da Silva
+Discente: Thiago da Mota Vilela
+E-mail: tmv@discente.ifpe.edu.br - Data: 04 de maio de 2022
+
+Atividade 03 - Exercício HTML+CSS (Criação de Formulário) (Atribuído)
+
+Crie um formulário (veja o exemplo abaixo) que contém os seguintes elementos:
+
+. Campos de entrada de sobrenome, nome e e-mail.
+. Dois botões de rádio para seleção de sexo.
+. Um controle destinado a transferir um arquivo de foto cujo formato é restrito aos tipos JPEG ou PNG.
+. Uma lista de opções para países.
+. Uma lista de múltipla escolha para as linguagens preferidos.
+. O botão de 'limpar' deve reinicializar as entradas do formulário.
+. O botão de 'enviar' deve validar e submeter as entradas do formulário.
+. O campo de idade deve permitir apenas cadastro de pessoas com no máximo 120 e no mínimo de 18 anos.
+
+Sugestão: 
+. Utilize a tag 'fieldset' para criar a moldura do formulário.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Application</title>
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="container">
+
+<div style="display:inline-block;vertical-align:top;"><br>
+    <img alt="img" class="responsive-img" height="100px" src="https://i.ibb.co/55tcbHC/ifpe.png" width="100px"/>
+</div>
+
+<div style="display:inline-block;"><br>
+    <h6>
+        ADSPL.16 - Desenvolvimento de Sistemas Web I<br>
+        <small class="text-muted">Docente: Danilo Farias Soares da Silva<br>
+            Discente: Thiago da Mota Vilela (20211ADSPL0140)<br>
+            E-mail: tmv@discente.ifpe.edu.br - Data: 04 de maio de 2022<br>
+            Atividade 03 - Exercício HTML+CSS (Criação de Formulário)</small>
+    </h6>
+</div>
+
+<form>
+    <fieldset class="border p-2">
+        <legend class="float-none w-auto p-2"><h5>Formulário de Inscrição:</h5></legend>
+
+        <div class="mb-3">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="input-firstname-sm"><i class="material-icons prefix">contact_page</i>&nbspNome</span>
+                <input type="text" class="form-control" placeholder="Insira seu Nome" aria-label="Sizing example input" aria-describedby="input-firstname">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="input-lastname-sm"><i class="material-icons prefix">description</i>&nbspSobrenome</span>
+                <input type="text" class="form-control" placeholder="Insira seu Sobrenome" aria-label="Sizing example input" aria-describedby="input-lastname-sm">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="input-age-sm"><i class="material-icons prefix">dialpad</i>&nbspIdade</span>
+                <input type="number" class="form-control" max="120" min="18" placeholder="Insira sua idade em anos" aria-label="Sizing example input" aria-describedby="input-age-sm">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="input-birthday-sm"><i class="material-icons prefix">cake</i>&nbspData de Nascimento</span>
+                <input type="date" class="form-control" min="1900-01-01" max="2050-12-12" aria-label="Sizing example input" aria-describedby="input-birthday-sm">
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="input-email-sm"><i class="material-icons prefix">email</i>&nbspE-mail</span>
+                <input type="email" class="form-control" placeholder="Insira seu e-mail" aria-label="Sizing example input" aria-describedby="input-email-sm">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <i class="material-icons prefix">wc</i>
+            Sexo<br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioMasculino">
+                <label class="form-check-label" for="flexRadioMasculino">
+                    Masculino
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioFeminino">
+                <label class="form-check-label" for="flexRadioFeminino">
+                    Feminino
+                </label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <i class="material-icons prefix">add_a_photo</i>
+            <label for="photo" class="form-label">Foto</label>
+            <input accept="image/png, image/jpeg" class="form-control form-control-sm" id="photo" type="file">
+        </div>
+
+        <div class="mb-3">
+            <i class="material-icons prefix">flag</i>
+            País
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Abra este menu de seleção</option>
+            <option value="argentina">Argentina</option>
+            <option value="brasil">Brasil</option>
+            <option value="canada">Canadá</option>
+            <option value="eua">Estados Unidos</option>
+            <option value="mexico">México</option>
+            <option value="other">Outro</option>
+        </select>
+        </div>
+
+        <div class="mb-3">
+            <i class="material-icons prefix">integration_instructions</i>
+            As linguagens que você prefere<br>
+            <select class="form-select" multiple aria-label="multiple select example">
+                <option value="1">JavaScript</option>
+                <option value="2">Java</option>
+                <option value="3">Python</option>
+                <option value="4">PHP</option>
+            </select>
+            Para fazer várias escolhas, matenha a tecla CTRL pressionada.
+        </div>
+
+        <div class="mb-3">
+            <i class="material-icons prefix"> work</i>
+            Área de Atuação<br>
+            <label>
+                <input type="checkbox"/>
+                <span>Computação</span>
+            </label><br>
+            <label>
+                <input type="checkbox"/>
+                <span>Gestão</span>
+            </label><br>
+            <label>
+                <input type="checkbox"/>
+                <span>Pedagogia</span>
+            </label>
+        </div>
+
+        <div class="mb-3">
+            <button class="btn btn-outline-success btn-sm" name="action" type="submit">Enviar
+                <i class="material-icons right">send</i>
+            </button>&nbsp
+
+            <button class="btn btn-outline-danger btn-sm" name="action" type="reset">Limpar
+                <i class="material-icons right">cleaning_services</i>
+            </button>
+        </div>
+
+    </fieldset>
+</form>
+</body>
+</html>
