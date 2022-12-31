@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Web Systems Development I" src="./img/ifpe-logo.png" />
+  <img alt="Web Systems Development I" src="web-systems-development-I(logo).png" />
 </h1>
 
 <h1 align="center">Web Systems Development I - 1st Unit</h1>
@@ -11,8 +11,6 @@ Project development for 1st unit the Web Systems I course at the Federal Institu
 - Introduction to Internet Browsers: Current state of browser support for standards;
 - HTML: Introduction, textual elements, lists, tables, forms, validation;
 - CSS: Introduction, selectors and properties, specificity, importance, validation;
-
-
 
 ### 🛠 Technologies
 
